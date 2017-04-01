@@ -1,32 +1,91 @@
 <!-- index.wxml -->
 <view class="container" >
+
+
+<view class="header">
+<!--Header greeting-->
   <view class="greeting">
-    <text class="userName">{{userInfo.nickName}},</text>
-    <text>{{greet}}</text>
-    </view>
-    <view class="motto">
+    <text class="userName">{{userInfo.nickName}} ~</text>
+    <text class="greet">{{greet}}</text>
+  </view>
+
+  <view class="motto">
       <text>{{motto.detail}}</text>
       <text> ——{{motto.author}}</text>
       <text> {{motto.source}}</text>
-    </view>
-  <view class="hr"></view>
-  <view class="weui-cells__title" >{{diyTitle}}</view>
-  <view class="weui-cells weui-cells_after-title" >
-    <navigator class=" weui-cell weui-cell_access" url=" " hover-class="   weui-cell_active" >
-      <view class=" weui-cell__hd" >
-        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
-        style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-      </view>
-      <view class="weui-cell__bd" >出发地</view>
-      <view class="weui-cell__ft weui-cell__ft_in-access" >北京</view>
-    </navigator>
-    <navigator class="weui-cell weui-cell_access" url=" " hover-class="   weui-cell_active" >
-      <view class=" weui-cell__hd" >
-        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
-        style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-      </view>
-      <view class="weui-cell__bd" >目的地</view>
-      <view class="weui-cell__ft weui-cell__ft_in-access" >广州</view>
-    </navigator>
   </view>
+
+</view> 
+
+<!--选择私人订制出发地，目的地-->
+  <view class="weui-cells__title" >{{diyTitle}}</view>
+
+  <view class="weui-cells weui-cells_after-title" >
+
+    <navigator class=" weui-cell weui-cell_access" url=" " hover-class="weui-cell_active" >
+     
+      <view class=" weui-cell__hd" >
+        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
+        style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+
+      <view class="weui-cell__bd" >出发地</view>
+
+      <view class="weui-cell__ft weui-cell__ft_in-access" >北京</view>
+
+    </navigator>
+
+    <navigator class="weui-cell weui-cell_access" url=" " hover-class="   weui-cell_active" >
+     
+      <view class=" weui-cell__hd" >
+        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
+        style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+
+      <view class="weui-cell__bd" >目的地</view>
+
+      <view class="weui-cell__ft weui-cell__ft_in-access" >广州</view>
+
+    </navigator>
+
+      <!--出发时间picker-->
+    <view class=" weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="bindanglechange" style="">
+     
+        <view class=" weui-cell__hd" >
+          <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
+          style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+
+        <view class="weui-cell__bd" >出发日期</view>
+
+        <view class="weui-cell__ft ft" >最早 {{date}}
+
+        <text class="angelNext" 
+        style=" -webkit-transform: rotate({{angle}}deg);transform: rotate({{angle}}deg);"
+        ></text>
+        
+        </view>
+
+    </view>
+
+  </view>
+
+
+<!--
+   <view class="weui-cell weui-cell_input">
+
+     <view class="weui-cell__hd">
+       <view class="weui-label">出发日期</view>
+     </view>
+
+     <view class="weui-cell__bd">
+
+       <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
+         <view class="weui-input">{{date}}</view>
+       </picker>
+
+     </view>
+
+   </view>
+-->
 </view>
