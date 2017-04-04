@@ -49,7 +49,7 @@
     </navigator>
 
       <!--出发时间picker-->
-    <view class=" weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="bindanglechange" style="">
+    <view class=" weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="bindanglechange">
      
         <view class=" weui-cell__hd" >
           <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
@@ -58,7 +58,7 @@
 
         <view class="weui-cell__bd" >出发日期</view>
 
-        <view class="weui-cell__ft ft" >最早 {{date}}
+        <view class="weui-cell__ft ft" >最早 {{qtdate}}
 
         <text class="angelNext" 
         style=" -webkit-transform: rotate({{angle}}deg);transform: rotate({{angle}}deg);"
@@ -66,14 +66,35 @@
         
         </view>
 
+        
+    </view>
+
+    <view class="datepick {{open ? 'show' : ''}}">
+      <picker mode="date" value="{{qtdate}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindqtdateChange">
+         <view class="" >选择最早出发日期</view>
+         <view class="weui-input">{{qtdate}}</view>
+       </picker>
+      <view class="boundary" >---</view>
+      <picker mode="date" value="{{stdate}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindstdateChange">
+         <view class="" >选择最晚出发日期</view>
+         <view class="weui-input">{{stdate}}</view>
+       </picker>
     </view>
 
   </view>
 
+  <view>
+  <!--旅行天数，人数，联系方式，备注，tbc-->
 
+
+  </view>
+
+
+
+</view>
 <!--
    <view class="weui-cell weui-cell_input">
-
+<view class="" >最早出发日期</view>   <view class="" >最晚出发日期</view>
      <view class="weui-cell__hd">
        <view class="weui-label">出发日期</view>
      </view>
@@ -88,4 +109,3 @@
 
    </view>
 -->
-</view>

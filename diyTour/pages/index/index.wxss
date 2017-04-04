@@ -110,7 +110,12 @@
   right: 2px;
   transition: all 0.5s
 }
-
+.weui-input {
+  height: 2.58823529em;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
+  text-align: center;
+}
 
 
 
@@ -144,7 +149,7 @@
 .weui-cell__bd,.weui-cell__ft{
   font-size: 0.8em;
 }
-.weui-cell__bd,.greeting{
+.weui-cell__bd,.greeting,.datepick{
   color: #c77b05;
 }
 .weui-cells_after-title{
@@ -174,7 +179,24 @@
   font-size: 0.8em;
   color: darkgrey;
 }
-
+.datepick{
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  font-weight: bold;
+  display: none;
+  transition: all 0.5s;
+  height: 0;
+}
+.show{
+  display: -webkit-flex;
+  display: flex;
+  height: auto;
+}
+.boundary{
+  margin: 1em;
+}
 
 
 

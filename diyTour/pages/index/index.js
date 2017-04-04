@@ -21,29 +21,38 @@ Page({
         source: " "
     },
     "diyTitle": "私人の定制",
-    "date": "2017-05-06",
-    "startDate": "2017-05-06",
-    "endDate": "2020-05-06",
-    "angle": 45
+    "qtdate": "2017-04-04",
+    "stdate": "2017-04-04",
+    "startDate": "2017-04-04",
+    "endDate": "2018-04-04",
+    "angle": 45,
+    "open": false
   },
   bindanglechange: function(){
     if(this.data.angle === 45){
       this.setData({
-            angle : 135
+            angle : 135,
+            open: true
         });
     }else{
       this.setData({
-            angle : 45
+            angle : 45,
+            open: false
         });
     }
         
   },
   //日期picker处理函数
-  bindDateChange: function (e) {
-        this.setData({
-            date: e.detail.value
-        })
-    },
+  bindqtdateChange: function (e) {
+      this.setData({
+          qtdate: e.detail.value
+       })
+  },
+  bindstdateChange: function (e) {
+      this.setData({
+           stdate: e.detail.value
+      })
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
