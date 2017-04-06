@@ -68,6 +68,7 @@
 .weui-cell__ft {
   text-align: right;
   color: #999999;
+  transition: all 0.3s;
 }
 .weui-cell__ft_in-access {
   padding-right: 13px;
@@ -116,6 +117,14 @@
   line-height: 2.58823529em;
   text-align: center;
 }
+.weui-textarea {
+  display: block;
+  width: 100%;
+}
+.weui-textarea-counter {
+  color: #B2B2B2;
+  text-align: right;
+}
 
 
 
@@ -146,7 +155,7 @@
   text-align: center;
   padding: 0 0.5em 0.5em;
 }
-.weui-cell__bd,.weui-cell__ft{
+.weui-cell__bd,.weui-cell__ft,.changenum,.num{
   font-size: 0.8em;
 }
 .weui-cell__bd,.greeting,.datepick{
@@ -197,6 +206,62 @@
 .boundary{
   margin: 1em;
 }
+.changenum{
+  display: inline-flex;
+}
+.num,.num-text{
+  width: 1.6em;
+  height:1.6em;
+  line-height: 1.6em;
+  text-align: center;
+}
+.num{
+  border-radius: 50%;
+  border: 1rpx solid #ff6a00;
+  color: #ff6a00;
+  font-weight: bold;
+  font-size: 1em;
+}
+.num-text,.textTitle{
+  font-size: 1.1em;
+}
+.hide{
+  opacity: 0;
+}
+.unhide{
+  opacity: 1;
+}
+.textTitle{
+  padding: 0.5em ;
+}
+.tabBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: rgba(74, 88, 106, 0.9);
+    color: #fff;
+    padding-left: 1.066667rem;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.barleft{
+  padding: 0.5rem 0;
+}
+.barright{
+  width: 85%;
+  background: #ff6a00;
+  text-align: center;
+}
+
 
 
 

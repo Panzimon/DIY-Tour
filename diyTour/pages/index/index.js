@@ -26,7 +26,12 @@ Page({
     "startDate": "2017-04-04",
     "endDate": "2018-04-04",
     "angle": 45,
-    "open": false
+    "open": false,
+    "daynum": 1,
+    "pernum": 1,
+    "tel": null,
+    "validate": false,
+    "letter": 0
   },
   bindanglechange: function(){
     if(this.data.angle === 45){
@@ -42,6 +47,26 @@ Page({
     }
         
   },
+  //验证联系方式
+  bindvalidate: function(e){
+      var value = e.detail.value;
+      //todo
+      if(value !== undefined){
+        this.setData({
+          validate: true
+        });
+        if(/^\d{11}$/.test(value)){
+          this.setData({
+            tel: value,
+            warnType: "success"
+        })
+        }else{
+          this.setData({
+            warnType: "warn"
+          })
+        }
+      }
+  },
   //日期picker处理函数
   bindqtdateChange: function (e) {
       this.setData({
@@ -53,11 +78,45 @@ Page({
            stdate: e.detail.value
       })
   },
+  //数量变化处理
+  changeNum: function(e){
+    var num = e.currentTarget.dataset.num,
+        type = e.currentTarget.dataset.type,
+        numchanged;
+    if(type === "day"){
+      numchanged = this.data.daynum + parseInt(num);
+      if(numchanged < 1) numchanged++;
+      this.setData({
+           daynum: numchanged
+      })
+    }else{
+      numchanged = this.data.pernum + parseInt(num);
+      if(numchanged < 1) numchanged++;
+      this.setData({
+          pernum: numchanged
+      })
+    }
+  },
+  //文本域字数限制
+  bindletter: function(e){
+    var letnum = e.detail.value.length;
+    this.setData({
+          letter: letnum
+      })
+  },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: ''
     })
+  },
+  //帮助提示
+  showhelp: function(){
+    //todo
+  },
+  //提交定制需求
+  submitAll: function(){
+    //todo
   },
   onLoad: function () {
     console.log('onLoad')
