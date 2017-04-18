@@ -55,7 +55,7 @@ Page({
         this.setData({
           validate: true
         });
-        if(/^\d{11}$/.test(value)){
+        if(/^1[34578]\d{9}$/.test(value)){
           this.setData({
             tel: value,
             warnType: "success"

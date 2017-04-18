@@ -20,14 +20,11 @@
 <!--选择私人订制出发地，目的地-->
   <view class="weui-cells__title" >{{diyTitle}}</view>
 
-  <view class="weui-cells weui-cells_after-title" >
+  <view class="weui-cells weui-cells_after-title pad" >
 
     <navigator class=" weui-cell weui-cell_access" url=" " hover-class="weui-cell_active" >
      
-      <view class=" weui-cell__hd" >
-        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
-        style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-      </view>
+      
 
       <view class="weui-cell__bd" >出发地</view>
 
@@ -37,10 +34,6 @@
 
     <navigator class="weui-cell weui-cell_access" url=" " hover-class="   weui-cell_active" >
      
-      <view class=" weui-cell__hd" >
-        <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
-        style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-      </view>
 
       <view class="weui-cell__bd" >目的地</view>
 
@@ -51,10 +44,7 @@
       <!--出发时间picker-->
     <view class=" weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="bindanglechange">
      
-        <view class=" weui-cell__hd" >
-          <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
-          style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-        </view>
+        
 
         <view class="weui-cell__bd" >出发日期</view>
 
@@ -83,10 +73,7 @@
 
   <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <!-- 旅行天数-->
-        <view class=" weui-cell__hd" >
-          <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
-          style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-        </view>
+        
 
         <view class="weui-cell__bd">旅行天数</view>
 
@@ -108,10 +95,7 @@
 
     <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
     <!--旅行人数-->
-        <view class=" weui-cell__hd" >
-          <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" 
-          style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-        </view>
+        
 
         <view class="weui-cell__bd">旅行人数</view>
 
@@ -132,13 +116,10 @@
     </view>
 <!--联系方式-->
             <view class="weui-cell weui-cell_input weui-cell_warn">
-              <view class=" weui-cell__hd">
-                <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="
-                       style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-              </view>
+              
               <view class="weui-cell__bd">联系方式</view>
               <view class="weui-cell__bd">
-                <input class="weui-input" placeholder="请输入手机号码" confirm-type="done" bindinput="bindvalidate"  />
+                <input class="weui-input" placeholder="请输入手机号码" confirm-type="done" bindinput="bindvalidate" maxlength="11" />
               </view>
               <view class="weui-cell__ft  hide {{validate ? 'unhide':'' }}">
                 <icon type="{{warnType}}" size="23"></icon>
@@ -157,7 +138,7 @@
 <!-- 底部 -->
   <view class="tabBar">
     <view class="barleft" bindtap="showhelp">
-      <icon type="info_circle" size="30" color="#ff6a00"></icon>
+      <icon type="info_circle" size="30" color="#8fcdb4"></icon>
     </view>
     <view class="barright" bindtap="submitAll">提交需求</view>
   </view>

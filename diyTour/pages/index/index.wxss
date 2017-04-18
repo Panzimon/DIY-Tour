@@ -63,6 +63,7 @@
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
+          padding-left: 0.5em;
 }
 
 .weui-cell__ft {
@@ -159,7 +160,7 @@
   font-size: 0.8em;
 }
 .weui-cell__bd,.greeting,.datepick{
-  color: #c77b05;
+  color: #0a9c61;
 }
 .weui-cells_after-title{
   border-radius: 0.8em;
@@ -217,8 +218,8 @@
 }
 .num{
   border-radius: 50%;
-  border: 1rpx solid #ff6a00;
-  color: #ff6a00;
+  border: 1rpx solid #8fcdb4;
+  color: #8fcdb4;
   font-weight: bold;
   font-size: 1em;
 }
@@ -232,7 +233,7 @@
   opacity: 1;
 }
 .textTitle{
-  padding: 0.5em ;
+  padding: 0.5em 0;
 }
 .tabBar {
     position: fixed;
@@ -258,10 +259,13 @@
 }
 .barright{
   width: 85%;
-  background: #ff6a00;
+  background: #8fcdb4;
   text-align: center;
+  color:rgb(74, 88, 106);
 }
-
+.pad{
+  padding:0 0 2.8rem 0;
+}
 
 
 
