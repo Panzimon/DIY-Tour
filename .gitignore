@@ -1,15 +1,23 @@
 #zy-pc programme of diyTour
 
-diyTour/.wing/
+
+diyTour/
+.wing/
+
 
 .DS_Store
 
+
 node_modules/
+
 
 dist/
 
+
 npm-debug.log
 
+
 .idea/
+
 
 *.docx
