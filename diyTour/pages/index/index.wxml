@@ -22,22 +22,20 @@
 
   <view class="weui-cells weui-cells_after-title pad" >
 
-    <navigator class=" weui-cell weui-cell_access" url=" " hover-class="weui-cell_active" >
-     
-      
+    <navigator class=" weui-cell weui-cell_access" url="/pages/cityAlphaList/alphabetList" hover-class="weui-cell_active" >
 
       <view class="weui-cell__bd" >出发地</view>
 
-      <view class="weui-cell__ft weui-cell__ft_in-access" >北京</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" data-origin="{{origin}}">{{origin}}</view>
 
     </navigator>
 
-    <navigator class="weui-cell weui-cell_access" url=" " hover-class="   weui-cell_active" >
+    <navigator class="weui-cell weui-cell_access" url=" " hover-class="weui-cell_active" >
      
 
       <view class="weui-cell__bd" >目的地</view>
 
-      <view class="weui-cell__ft weui-cell__ft_in-access" >广州</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" data-destination="{{destination}}">{{destination}}</view>
 
     </navigator>
 

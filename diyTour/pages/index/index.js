@@ -31,7 +31,17 @@ Page({
     "pernum": 1,
     "tel": null,
     "validate": false,
-    "letter": 0
+    "letter": 0,
+    "origin": "广州",
+    "destination": "深圳" 
+  },
+  onShow: function(){
+    var origin = wx.getStorageSync('origin') || '广州';
+    var destination = wx.getStorageSync('destination') || '深圳';
+    this.setData({
+      "origin": origin,
+      "destination": destination 
+    })
   },
   bindanglechange: function(){
     if(this.data.angle === 45){
