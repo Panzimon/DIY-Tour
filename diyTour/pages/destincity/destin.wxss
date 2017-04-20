@@ -1,0 +1,118 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+}
+.cityinput {
+  margin: 30rpx 50rpx ;
+  padding: 10rpx;
+  border: solid 5rpx #a8a8a8;
+  border-radius: 15rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 1;
+}
+.h-city {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  line-height: 1.0;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #a8a8a8;
+  padding:10rpx;
+}
+.h-city image {
+  width: 22rpx;
+  height: 27rpx;
+  margin-right: 16rpx;
+}
+
+.h-close image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.now-city {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f2f4f5;
+  font-size: 25rpx;
+	line-height: 1.0;
+	color: #a8a8a8;
+  border-bottom: 1rpx solid #dbdbdb;
+}
+.now-city-name,.now-city > text{
+  font-size: 30rpx;
+	line-height: 1.0;
+  margin :5rpx 20rpx 30rpx 30rpx;
+  color: #333;
+}
+.now-city-name {
+  display: flex;
+  background: white;
+	letter-spacing: 0.4rpx;
+	color: #333333;
+  padding: 13rpx 33rpx;
+  border: solid 1rpx #dbdbdb;
+}
+.section-item-header {
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  font-weight: bold;
+	color: #a0a0a0;
+	background-color: #f2f4f5;
+  padding: 20rpx;
+}
+
+.section-item-cells {
+  padding-left: 20rpx;
+  background-color: #fff;
+}
+.section-item-cell{
+  font-size: 35rpx;
+	line-height: 1.0;
+	color: #333;
+  padding: 20rpx 5rpx;
+}
+.border-bottom {
+  border-bottom: 1rpx solid #dbdbdb;
+}
+.alphanet-selector {
+  position: fixed;
+  top: 15%;
+  right: 1%;
+  height: 800rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 100;
+  box-sizing: border-box;
+}
+.selector-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+	color: #43c1f4;
+  padding: 3px 3px;
+  line-height: 11px;
+}
+.showSlectedLetter {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -100rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  font-size: 52rpx;
+  z-index: 1;
+}

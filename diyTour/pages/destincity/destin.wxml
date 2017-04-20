@@ -1,0 +1,54 @@
+<scroll-view scroll-y style="height: {{windowHeight}}" scroll-into-view="{{alpha}}">
+<view class="alphabet">
+
+  <view class="cityinput">
+    <input bindinput="bindKeyInput" placeholder="请输入城市名称"/>
+  </view>
+
+  <view id="Top" class="header">
+    <view class="h-city">
+      <text>历史记录</text>
+      </view>
+  </view>
+
+  <view class="now-city">
+    <view bindtap="bindselectCity" data-selectcity="{{hisCity}}" class="{{hisCity === '' ? '':'now-city-name' }}">{{hisCity}}</view>
+    <text>城市</text>
+  </view>
+
+  <view class="alphabet-list" wx:if="{{!showArr}}">
+     <view wx:for="{{list}}" wx:key="unique" id="{{item.alphabet}}" class="section-item" >
+       
+       <view class="section-item-header">
+         {{item.alphabet}}
+       </view>
+       
+       <view wx:for="{{item.datas}}" wx:key="unique" wx:for-item="cell" wx:for-index="cellIndex" class="section-item-cells">
+         <view class="section-item-cell {{cellIndex != (item.datas.length-1) ? 'border-bottom':''}}">
+           <view bindtap="bindselectCity" data-selectcity="{{cell}}">{{cell}}</view>
+         </view>
+       </view>
+
+     </view>
+  </view>
+
+  <view wx:if="{{showArr}}">
+    <view wx:for="{{all}}" wx:key="unique" wx:for-item="keycity" wx:for-index="keycityIndex" class="section-item-cells">
+      <view class="section-item-cell {{keycityIndex != (item.datas.length-1) ? 'border-bottom':''}}">
+           <view bindtap="bindselectCity" data-selectcity="{{keycity}}">{{keycity}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+</scroll-view>
+<view data-id="selector" catchtouchstart="handlerAlphaTap" catchtouchmove="handlerMove" class="alphanet-selector" >
+  <view data-ap="{{item.alphabet}}" wx:for="{{list}}" wx:key="unique" class="selector-one" catchtouchend="clickLetter">
+    {{item.alphabet}}
+  </view>
+</view>
+<block wx:if="{{isShowLetter}}">
+  <view class="showSlectedLetter">
+    {{showLetter}}
+  </view>
+</block>
