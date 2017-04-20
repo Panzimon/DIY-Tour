@@ -22,7 +22,7 @@
 
   <view class="weui-cells weui-cells_after-title pad" >
 
-    <navigator class=" weui-cell weui-cell_access" url="/pages/cityAlphaList/alphabetList" hover-class="weui-cell_active" >
+    <navigator class=" weui-cell weui-cell_access" url="/pages/origincity/origin" hover-class="weui-cell_active" >
 
       <view class="weui-cell__bd" >出发地</view>
 
@@ -30,7 +30,7 @@
 
     </navigator>
 
-    <navigator class="weui-cell weui-cell_access" url=" " hover-class="weui-cell_active" >
+    <navigator class="weui-cell weui-cell_access" url="/pages/destincity/destin" hover-class="weui-cell_active" >
      
 
       <view class="weui-cell__bd" >目的地</view>

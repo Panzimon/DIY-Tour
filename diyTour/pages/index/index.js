@@ -37,7 +37,7 @@ Page({
   },
   onShow: function(){
     var origin = wx.getStorageSync('origin') || '广州';
-    var destination = wx.getStorageSync('destination') || '深圳';
+    var destination = wx.getStorageSync('destin') || '深圳';
     this.setData({
       "origin": origin,
       "destination": destination 

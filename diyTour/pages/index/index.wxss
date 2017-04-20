@@ -110,7 +110,7 @@
   top: 50%;
   margin-top: -4px;
   right: 2px;
-  transition: all 0.5s
+  transition: all 0.3s
 }
 .weui-input {
   height: 2.58823529em;
