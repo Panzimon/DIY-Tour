@@ -58,7 +58,7 @@ Page({
   bindKeyInput: function (e) {
 
     var arr = all;
-    console.log(all);
+    //console.log(all);
 
     var keystr = e.detail.value;
     var keyarr = [];

@@ -213,7 +213,7 @@
 .num,.num-text{
   width: 1.6em;
   height:1.6em;
-  line-height: 1.6em;
+  line-height: 1.75em;
   text-align: center;
 }
 .num{

@@ -5,7 +5,7 @@
 <view class="header">
 <!--Header greeting-->
   <view class="greeting">
-    <text class="userName">{{userInfo.nickName}} ~</text>
+    <text class="userName">{{userInfo.nickName || 'Dear Friend'}} ~</text>
     <text class="greet">{{greet}}</text>
   </view>
 
@@ -117,7 +117,7 @@
               
               <view class="weui-cell__bd">联系方式</view>
               <view class="weui-cell__bd">
-                <input class="weui-input" placeholder="请输入手机号码" confirm-type="done" bindinput="bindvalidate" maxlength="11" />
+                <input class="weui-input" placeholder="请输入手机号码" confirm-type="done" bindinput="bindvalidate" maxlength="11" value="{{tel}}"/>
               </view>
               <view class="weui-cell__ft  hide {{validate ? 'unhide':'' }}">
                 <icon type="{{warnType}}" size="23"></icon>
