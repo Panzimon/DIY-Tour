@@ -1,163 +1,105 @@
+
 <!-- index.wxml -->
-<view class="container" >
+<view class="container">
+  <view class="header">
 
-
-<view class="header">
-<!--Header greeting-->
-  <view class="greeting">
-    <text class="userName">{{userInfo.nickName || 'Dear Friend'}} ~</text>
-    <text class="greet">{{greet}}</text>
-  </view>
-
-  <view class="motto">
+    <!--Header greeting-->
+    <view class="greeting">
+      <text class="userName">{{userInfo.nickName || 'Dear Friend'}} ~</text>
+      <text class="greet">{{greet}}</text>
+    </view>
+    <view class="motto">
       <text>{{motto.detail}}</text>
       <text> ——{{motto.author}}</text>
       <text> {{motto.source}}</text>
+    </view>
   </view>
 
-</view> 
-
-<!--选择私人订制出发地，目的地-->
-  <view class="weui-cells__title" >{{diyTitle}}</view>
-
-  <view class="weui-cells weui-cells_after-title pad" >
-
-    <navigator class=" weui-cell weui-cell_access" url="/pages/origincity/origin" hover-class="weui-cell_active" >
-
-      <view class="weui-cell__bd" >出发地</view>
-
+  <!--选择私人订制出发地，目的地-->
+  <view class="weui-cells__title">{{diyTitle}}</view>
+  <view class="weui-cells weui-cells_after-title pad">
+    <navigator class=" weui-cell weui-cell_access" url="/pages/origincity/origin" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">出发地</view>
       <view class="weui-cell__ft weui-cell__ft_in-access" data-origin="{{origin}}">{{origin}}</view>
-
     </navigator>
-
-    <navigator class="weui-cell weui-cell_access" url="/pages/destincity/destin" hover-class="weui-cell_active" >
-     
-
-      <view class="weui-cell__bd" >目的地</view>
-
+    <navigator class="weui-cell weui-cell_access" url="/pages/destincity/destin" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">目的地</view>
       <view class="weui-cell__ft weui-cell__ft_in-access" data-destination="{{destination}}">{{destination}}</view>
-
     </navigator>
 
-      <!--出发时间picker-->
+    <!--出发时间picker-->
     <view class=" weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="bindanglechange">
-     
-        
-
-        <view class="weui-cell__bd" >出发日期</view>
-
-        <view class="weui-cell__ft ft" >最早 {{qtdate}}
-
-        <text class="angelNext" 
-        style=" -webkit-transform: rotate({{angle}}deg);transform: rotate({{angle}}deg);"
-        ></text>
-        
-        </view>
-
-        
+      <view class="weui-cell__bd">出发日期</view>
+      <view class="weui-cell__ft ft">最早 {{qtdate}}
+        <text class="angelNext" style=" -webkit-transform: rotate({{angle}}deg);transform: rotate({{angle}}deg);"></text>
+      </view>
     </view>
-
     <view class="datepick {{open ? 'show' : ''}}">
       <picker mode="date" value="{{qtdate}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindqtdateChange">
-         <view class="" >选择最早出发日期</view>
-         <view class="weui-input">{{qtdate}}</view>
-       </picker>
-      <view class="boundary" >---</view>
+        <view class="">选择最早出发日期</view>
+        <view class="weui-input">{{qtdate}}</view>
+      </picker>
+      <view class="boundary">---</view>
       <picker mode="date" value="{{stdate}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindstdateChange">
-         <view class="" >选择最晚出发日期</view>
-         <view class="weui-input">{{stdate}}</view>
-       </picker>
+        <view class="">选择最晚出发日期</view>
+        <view class="weui-input">{{stdate}}</view>
+      </picker>
     </view>
-
-  <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-    <!-- 旅行天数-->
-        
-
-        <view class="weui-cell__bd">旅行天数</view>
-
-        <view class="changenum">
-
-          <view class="num" data-num="-1" data-type="day" catchtap="changeNum">
-            <text class="sign">-</text>
-          </view>
-
-          <text class="num-text">{{daynum}}</text>
-
-          <view class="num" data-num="1" data-type="day" catchtap="changeNum">
-            <text class="sign">+</text>
-          </view>
-
-        </view>
-
-    </view>
-
     <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-    <!--旅行人数-->
-        
 
-        <view class="weui-cell__bd">旅行人数</view>
-
-        <view class="changenum">
-
-          <view class="num" data-num = "-1" data-type="per" catchtap="changeNum">
-            <text class="sign">-</text>
-          </view>
-
-          <text class="num-text">{{pernum}}</text>
-
-          <view class="num" data-num = "1" data-type="per" catchtap="changeNum">
-            <text class="sign">+</text>
-          </view>
-
+      <!-- 旅行天数-->
+      <view class="weui-cell__bd">旅行天数</view>
+      <view class="changenum">
+        <view class="num" data-num="-1" data-type="day" catchtap="changeNum">
+          <text class="sign">-</text>
         </view>
-
+        <text class="num-text">{{daynum}}</text>
+        <view class="num" data-num="1" data-type="day" catchtap="changeNum">
+          <text class="sign">+</text>
+        </view>
+      </view>
     </view>
-<!--联系方式-->
-            <view class="weui-cell weui-cell_input weui-cell_warn">
-              
-              <view class="weui-cell__bd">联系方式</view>
-              <view class="weui-cell__bd">
-                <input class="weui-input" placeholder="请输入手机号码" confirm-type="done" bindinput="bindvalidate" maxlength="11" value="{{tel}}"/>
-              </view>
-              <view class="weui-cell__ft  hide {{validate ? 'unhide':'' }}">
-                <icon type="{{warnType}}" size="23"></icon>
-              </view>
-            </view>
-<!-- 备注 -->
-            <view class="weui-cell">
-              <view class="weui-cell__bd">
-                <view class="textTitle">备注留言</view>
-                <textarea class="weui-textarea" placeholder="请输入文本" style="height: 5em" bindinput="bindletter" />
-                <view class="weui-textarea-counter">{{letter}}/140</view>
-              </view>
-            </view>
+    <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
 
+      <!--旅行人数-->
+      <view class="weui-cell__bd">旅行人数</view>
+      <view class="changenum">
+        <view class="num" data-num="-1" data-type="per" catchtap="changeNum">
+          <text class="sign">-</text>
+        </view>
+        <text class="num-text">{{pernum}}</text>
+        <view class="num" data-num="1" data-type="per" catchtap="changeNum">
+          <text class="sign">+</text>
+        </view>
+      </view>
+    </view>
+
+    <!--联系方式-->
+    <view class="weui-cell weui-cell_input weui-cell_warn">
+      <view class="weui-cell__bd">联系方式</view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请输入手机号码" confirm-type="done" bindinput="bindvalidate" maxlength="11" value="{{tel}}" />
+      </view>
+      <view class="weui-cell__ft  hide {{validate ? 'unhide':'' }}">
+        <icon type="{{warnType}}" size="23"></icon>
+      </view>
+    </view>
+
+    <!-- 备注 -->
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <view class="textTitle">备注留言</view>
+        <textarea class="weui-textarea" placeholder="请输入文本" style="height: 5em" bindinput="bindletter" />
+        <view class="weui-textarea-counter">{{letter}}/140</view>
+      </view>
+    </view>
   </view>
-<!-- 底部 -->
+
+  <!-- 底部 -->
   <view class="tabBar">
     <view class="barleft" bindtap="showhelp">
       <icon type="info_circle" size="30" color="#8fcdb4"></icon>
     </view>
     <view class="barright" bindtap="submitAll">提交需求</view>
   </view>
-
-
-
 </view>
-<!--
-   <view class="weui-cell weui-cell_input">
-<view class="" >最早出发日期</view>   <view class="" >最晚出发日期</view>
-     <view class="weui-cell__hd">
-       <view class="weui-label">出发日期</view>
-     </view>
-
-     <view class="weui-cell__bd">
-
-       <picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">
-         <view class="weui-input">{{date}}</view>
-       </picker>
-
-     </view>
-
-   </view>
--->

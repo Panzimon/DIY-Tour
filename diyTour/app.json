@@ -1,37 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/origincity/origin",
     "pages/destincity/destin"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f5f5f5",
     "navigationBarTitleText": "游你话事",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "enablePullDownRefresh": false
-  },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/icon_classify.png",
-        "selectedIconPath": "images/icon_classify_select.png",
-        "text": "定制需求"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "Info",
-        "iconPath": "images/icon_home.png",
-        "selectedIconPath": "images/icon_home_select.png"
-      }
-    ],
-    "color": "#c6c6c6",
-    "selectedColor": "#8fcdb4",
-    "backgroundColor": "#f7f7fa",
-    "borderStyle": "white",
-    "position": "bottom"
   },
   "debug": true
 }
